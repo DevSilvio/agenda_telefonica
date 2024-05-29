@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda telefônica</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./main.css">
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h2>📙</h2>
+            <h1>Agenda telefônica</h1>
+        </header>
+        <form id="form-contato">
+            <input type="text" id="nome-contato" required placeholder="Nome">
+            <input type="tel" id="tel-contato" required placeholder="(DDD) 9 0000-0000">
+            <button type="submit" id="button-add">Adicionar</button>
+        </form>
+        <table cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>contatos</td>
+                    <td id="contatos-salvos">--</td>
+                    <td id="salvoOsContato">--</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>

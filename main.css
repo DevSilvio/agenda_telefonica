@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    padding-top: 120px;
+}
+
+header {
+    max-width: 960px;
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 40px;
+}
+
+header h2 {
+    font-size: 40px;
+}
+
+header h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 680px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+form {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+form input {
+    font-size: 18px;
+    border: none;
+    border-bottom: 2px groove #000; 
+    padding: 8px;
+}
+
+form button {
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px;
+    background-color: #06e75d;
+    cursor: pointer;
+}
+
+form button:hover {
+    color: #fff;
+    background-color: #059c3f;
+}
+
+table {
+    width: 100%;
+}
+
+table th {
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 2px groove #000;
+}
+
+table td {
+    border-bottom: 1px groove rgba(0,0,0,0.2);
+    font-size: 18px;
+    padding: 10px;
+    text-align: center;
+}
+
+.salvo {
+    border-radius: 8px;
+    background-color: #06e75d;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px;
+}
