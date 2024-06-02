@@ -1,7 +1,6 @@
 const form = document.getElementById('form-contato');
 const telContato = document.getElementById('tel-contato');
 const messageSalvo = `<span class="salvo">Salvos</span>`;
-let linhas = '';
 let nome = [];
 let telefone = [];
 
