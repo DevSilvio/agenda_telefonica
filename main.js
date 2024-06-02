@@ -18,13 +18,13 @@ telContato.addEventListener('input', function(){
 form.addEventListener('submit', function(e){
     e.preventDefault();
 
-    adicionarContato();
-    ordenarContatos(); // Adicionando a chamada da funÃ§Ã£o para ordenar os contatos
-    atualizarLista();
+    addContato();
+    ordenarContatos();
+    attLista();
     atualizarContatosSalvos();
 });
 
-function adicionarContato(){
+function addContato(){
     const nomeContato = document.getElementById('nome-contato');
     
     if (nome.includes(nomeContato.value)){
@@ -41,17 +41,16 @@ function adicionarContato(){
 }
 
 function ordenarContatos(){
-    // FunÃ§Ã£o adicionada: Ordena os arrays nome e telefone com base na ordem alfabÃ©tica de nome
-    const combinados = nome.map((nome, indice) => ({ nome, telefone: telefone[indice] }));
-    combinados.sort((a, b) => a.nome.localeCompare(b.nome));
+    const organizar = nome.map((nome, indice) => ({ nome, telefone: telefone[indice] }));
+    organizar.sort((a, b) => a.nome.localeCompare(b.nome));
 
-    nome = combinados.map(contato => contato.nome);
-    telefone = combinados.map(contato => contato.telefone);
+    nome = organizar.map(contato => contato.nome);
+    telefone = organizar.map(contato => contato.telefone);
 }
 
-function atualizarLista(){
+function attLista(){
     const corpoLista = document.querySelector('tbody');
-    corpoLista.innerHTML = ''; // Alterado: Limpa o conteÃºdo anterior
+    corpoLista.innerHTML = '';
 
     for (let i = 0; i < nome.length; i++) {
         let linha = '<tr>';
@@ -59,7 +58,7 @@ function atualizarLista(){
         linha += `<td>${telefone[i]}</td>`;
         linha += `<td>✅</td>`;
         linha += '</tr>';
-        corpoLista.innerHTML += linha; // Alterado: Adiciona a linha atualizada Ã  lista
+        corpoLista.innerHTML += linha;
     }
 }
 
